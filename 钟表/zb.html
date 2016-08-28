@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+	body{
+		background: #f3e8cc;
+	}
+	.clock{ 
+		width:300px; 
+		height:300px; 
+		background:url(3.jpg); 
+		margin:150px auto; 
+		position:relative;
+		background-size: 100% 100%;
+		border-radius: 50%;
+	}
+	.clock p{ 
+		position:absolute; top:50%; left:50%; 
+		transform-origin:bottom;
+	}
+	.step{ 
+		width:20px; 
+		height:20px; 
+		background:-webkit-radial-gradient(#666,#FFF); 
+		margin-left:-10px; 
+		margin-top:-10px; 
+		border-radius:50%;
+	}
+	.hours{ 
+		width:20px; 
+		height:80px; 
+		background:#000; 
+		margin-left:-10px; 
+		margin-top:-80px; 
+		border-radius:50% 50% 0 0;
+	}
+	.min{ 
+		width:16px; 
+		height:100px; 
+		background:#000; 
+		margin-left:-8px; 
+		margin-top:-100px; 
+		border-radius:50% 50% 0 0;
+	}
+	.sec{ 
+		width:10px; 
+		height:120px; 
+		background:red; 
+		margin-left:-5px; 
+		margin-top:-120px; 
+		border-radius:50% 50% 0 0;
+	}
+</style>
+<script>
+	window.onload=function(){
+		var oH = document.querySelector('.hours');
+		var oM = document.querySelector('.min');
+		var oS = document.querySelector('.sec');
+		
+		clock();
+		function clock(){
+			var oDate = new Date();
+		
+			var nH = oDate.getHours();
+			var nM = oDate.getMinutes();
+			var nS = oDate.getSeconds();
+			var nMs = oDate.getMilliseconds();
+			
+			var iH = nH % 12 * 30 + nM / 60 * 30;
+			var iM = nM * 6 + nS / 60 * 6;
+			var iS = nS * 6 + nMs / 1000 * 6;
+			
+			oH.style.transform = 'rotate('+iH+'deg)';
+			oM.style.transform = 'rotate('+iM+'deg)';
+			oS.style.transform = 'rotate('+iS+'deg)';		
+		}
+		
+		setInterval(clock,30);
+				
+	};
+</script>
+</head>
+
+<body>
+	<div class="clock">
+    	<p class="hours"></p>
+        <p class="min"></p>
+        <p class="sec"></p>
+        <p class="step"></p>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

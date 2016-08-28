@@ -1,0 +1,172 @@
+    /* 首屏样式 开始*/
+    .module1{
+        position:fixed;top:0;left: 50%;
+        margin-left: -375px;
+        z-index: 3;
+    }
+    .box1{
+        width: 100%;
+        height: 700px;
+        background: #334960;
+        position:relative;
+    }
+    .box1 .sjx{
+        width: 100px;
+        height: 100px;
+        background:linear-gradient(45deg,#334960 0,#334960 50%,transparent 50%);
+        position:absolute;bottom: 1px;left: 50%;
+        margin-left: -50px;
+        -webkit-transform:rotateZ(-45deg) translateY(70px);
+        z-index: 2;
+    }
+    
+    .box1 ul li{
+        font-size: 50px;
+        font-family: '楷体';
+        background:transparent;
+        color:white;
+        opacity: 0;
+        -webkit-transition:1s all ease;
+        text-shadow: 0 0 3px white;
+    }
+    .li-1{
+        position:absolute;top: 15%;left:10%;
+        -webkit-transform:rotateZ(90deg) rotateX(90deg) ;
+    }
+    .li-2{
+        position:absolute;top: 30%;
+        -webkit-transform:translateY(-500px);
+    }
+    .li-3{
+        position:absolute;top: 45%;right:0;
+        -webkit-transform:translateX(-1000px);
+    }
+    .li-4{
+        position:absolute;top: 65%;right:40%;
+        -webkit-transform:scale(2);
+    }
+    .box1 ul .li-5{
+        position:absolute;bottom:10%;right:0;
+        font-size: 30px;
+        box-shadow: 0 0 10px white;
+        border-radius: 10px;
+        color:#ccc;
+        -webkit-transform:rotateY(360deg);
+    }
+    .li-5 a{
+        color:#abc;
+        font-size: 20px;
+        margin-left: 15px;
+        text-decoration: underline;
+
+    }
+    /* 首屏样式 结束*/
+
+    /* 绿色模块样式 开始*/
+    .box2{
+        background:#32ac97;
+    }
+    .sjx2{
+        width: 100px;
+        height: 100px;
+        background:linear-gradient(45deg,#32ac97 0,#32ac97 50%,transparent 50%);
+        position:absolute;bottom: 1px;left: 50%;
+        margin-left: -50px;
+        -webkit-transform:rotateZ(-45deg) translateY(70px);
+        z-index: 2;
+    }
+    .time{
+        position:absolute;top:20px;left:30px;
+        z-index: 3;
+        font-family: '楷体';
+    }
+    .lt{
+        width: 115px;
+        height: 20px;
+        -webkit-transform:rotateZ(-40deg) translate(-25px,0px) rotateX(180deg);
+        background:linear-gradient(-40deg,transparent 0,transparent 20%,green 20%,green 80%);
+        line-height: 20px;
+        color:white;
+    }
+    .photo{
+        width: 150px;
+        height: 150px;
+        border-bottom-left-radius: 50%;
+        border-bottom-right-radius: 50%;
+        background: url(../img/2.png) no-repeat;
+        background-size:100% 100%;
+        margin-top: -20px;
+        opacity:0;
+        -webkit-transition:2s all ease;
+    }
+    .qq{
+        position:absolute;bottom:0;right: 5px;
+        border-radius: 10px;
+    }
+    .qq img{
+        border-radius: 10px;
+        box-shadow: 0 0 10px white;
+    }
+    .alig{
+        width:90%;
+        height:330px;
+        border-radius: 10px;
+        background:black;
+        margin-top: 10px;
+        margin-left: 5%;
+        overflow: hidden;
+        -webkit-transform:rotateZ(-360deg) translateX(-1500px)translateY(-1500px);
+        -webkit-transition:1s all ease;
+    }
+    .article{
+        width:100%;
+        height: 600px;
+        position:absolute;
+        -webkit-transition:2s all ease;
+    }
+    .article span{
+        transition:3s all ease;
+        font-size: 31px;
+        text-shadow:0 0 100px transparent;
+        color:transparent;
+        font-weight: bold;
+        font-family: '楷体';
+        font-size: 30px;
+    }
+    /* 绿色模块样式 结束*/
+
+    /* 尾部样式 开始*/
+    .foot{
+        width:100%;
+        height:66px;
+        background: #334960;
+        border-top: 3px solid black;
+        border-bottom: 2px solid #32ac97;
+    }
+    .footbox{
+        margin:10px 0 0 100px;
+        font-family: cursive;
+        color:white;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    .footbox a{
+        color:#ccc;
+        margin-left: 10px;
+    }
+    .footbox p:hover{
+        opacity:0.7;
+    }
+    .footbox a:hover {
+        color:red;
+    }
+    .totop{
+        display: block;
+        width:45px;
+        height:45px;
+        border-radius: 50%;
+        background: url(../img/totop.png) no-repeat;
+        position:fixed;right:0;bottom:0;
+        opacity:0;
+        -webkit-transition:1s all ease;
+    }

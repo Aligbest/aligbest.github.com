@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>静态网页</title>
+<link rel="stylesheet" type="text/css" href="css/All.css" />
+<link rel="stylesheet" type="text/css" href="css/no4.css" />
+<script src="js/nav4.js"></script>
+<script src="js/show2.js"></script>
+</head>
+
+<body>
+    <div class="all">
+        <!-- 导航开始 -->
+        <div class="module4">
+            <ul class="nav" id="nav">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="module2.html">掌握</a></li>
+                <li><a href="module3.html">3D环展示</a></li>
+                <li><a href="javascript:;">静态网页展示</a></li>     
+                <li><a href="module5.html">小作品展示</a></li>
+                <li class="move"> </li>
+            </ul>
+        </div>
+        <!-- 导航结束 -->
+     
+        <div class="box">
+            <!-- 切换按钮 -->
+            <p style="text-align:center; margin-top:30px;">
+                <input type="button" value="上一个" />
+                <input type="button" value="下一个" />
+            </p>
+
+            <!-- 作品图添加开始 -->
+            <ul class="list">
+                <li class="pre2">
+                    <a href="网页作品/移动端页面/phone.html" class="no1" target="_blank"></a>
+                </li>
+                <li class="pre">
+                    <a href="网页作品/美丽说/MLS.html" class="no2" target="_blank"></a>
+                </li>
+                <li class="now">
+                    <a href="网页作品/个人玩/1.html" class="no3" target="_blank"></a>
+                </li>
+                <li class="next">
+                    <a href="网页作品/爱奇艺/爱奇艺.html" class="no4" target="_blank"></a>
+                </li>
+                <li class="next2">
+                    <a href="网页作品/小米/小米.html" class="no5" target="_blank"></a>
+                </li>
+                <li>
+                    <a href="网页作品/京东手机版/index.html" class="no6" target="_blank"></a>
+                </li>
+                <li>
+                    <a href="酒店哥哥/index.html" class="no7" target="_blank"></a>
+                </li>
+            </ul>
+            <!-- 作品图添加结束-->
+        </div>
+
+        <div style="width:100%;padding-bottom:100px;"></div>
+    </div>
+
+    <script type="text/javascript">
+    window.onload = function(){
+
+        //导航引用nav.js；
+        nav(); 
+
+        // 切换效果引用show2.js；
+        show2();      
+    }
+    </script>
+</body>
+</html>

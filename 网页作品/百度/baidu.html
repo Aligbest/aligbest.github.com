@@ -1,0 +1,155 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+	body{
+		overflow:hidden;
+	}
+	.cl{
+		text-decoration: none;
+		color: black;
+		font-weight: bold;
+		font-size: 20px;
+		font-family: '楷体';
+		border:1px black dashed;
+	}
+	.box{
+	   width: 391px;
+	   height: 448px;
+	   position: absolute;top: 50%;left: 50%; 
+	   margin-top:  -224px;
+	   margin-left:-195.5px;
+	   border: 1px solid #dddddd;
+	   overflow: hidden;
+	}
+
+	.head{
+		height: 46px;
+		background: url(head.png) no-repeat;
+	}
+	.a1{
+		text-decoration: none;
+		color: #666666;
+		margin-top: 28px;
+		margin-left: 284px;
+		display: block;
+		font-size: 11px;
+	}
+	img{
+		margin-right: 5px;
+	}
+	.ipt1{
+		width: 348px;
+		height: 40px;
+		background: url(ipt.png);
+		border: 1px solid #ddd;
+		margin-left: 20px;
+		margin-top: 13px;
+	}
+	.ipt2{
+		width: 348px;
+		height: 40px;
+		background: url(ipt2.png);
+		border: 1px solid #ddd;
+		margin-left: 20px;
+		margin-top: 15px;
+	}
+	.ipt3{
+		margin-top: 18px;
+		margin-left: 20px;
+	}
+	span{
+		color: #666;
+		font-size: 11px;
+	}
+	.fr a{
+		float: right;
+		margin-top: -15px;
+		margin-right: 20px;
+		color: #1b66c7;
+		text-decoration: none;
+	}
+	.div1{
+		margin-top: 13px;
+		margin-left: 21px;
+	}
+	.a3{
+		text-decoration: none;
+		margin-left: 285px;
+		display: block;
+		margin-top: 20px;
+		font-size: 15px;
+		color: #1b66c7;
+	}
+	.all{
+		opacity:0;
+	}
+	</style>
+	<script src="jquery-1.7.2.js"></script>
+</head>
+
+<body>
+<!-- 最早期 -->
+	<div class="all">
+		<div class="box">
+			<!-- 头部 开始 -->
+			<div class="head">
+				<a href="javascript:;" style="margin-left:355px;margin-top:17px;float:left"><img src="x.png" class="off"></a>
+			</div>
+			<!--  头部 结束 -->
+	        <a class="a1" href="javascript:;"><img src="sj.png">短信快捷登陆</a>
+	     
+		
+	    <div>
+	    	<div style="position:relative;">
+	    		<input type="text" name="user"  class="ipt1" />
+				<input type="text" name="user"  class="ipt2" />
+				<input type="text" placeholder="手机/邮箱/用户名" style="position:absolute;top:15px;left:50px;width:317px;height:37px;border:none;" class="i1" />
+				<input type="text" placeholder="密码" style="position:absolute;top:70px;left:50px;width:317px;height:37px;border:none;" class="i1" />
+	    	</div>
+			
+			<input type="checkbox" name="denglu" value="xiaci" class="ipt3"><span>下次自动登录  </span><div class="fr"><a href="javascript:;">登录遇到问题</a></div>
+		</div>
+
+		<div class="div1"><a href="javscript:;"><img src="dl.png"></a><a class="a3" href="javascript:;">立即注册</a></div>
+
+
+
+
+	         <div style="background:url(qq.png) no-repeat;width:391px;height:87px;margin-top:38px;border-top:1px solid #eeeeee;">
+	         	<a href="javascript:;" style="margin-top:48px;margin-left:22px;float:left"><img src="qq1.png"></a>
+	         	<a href="javascript:;" style="margin-top:48px;margin-left:22px;float:left"><img src="wb.png"></a>
+	         </div>
+
+		</div>
+	</div>
+	<a href="javascript:;" class="cl">登录</a>
+	<script>
+		$(function(){
+			var oAll=$('.all');
+			$('.off').click(function(){
+				oAll.css('WebkitTransition','1s all ease')
+				oAll.css('WebkitTransform','rotateZ(1000deg)');
+				oAll.css('opacity','0');
+				$('.i1').val("");
+			});
+
+			$('.ipt1').click(function(){
+				$(this).value('         ')
+				$(this).removeAttr('placeholder');
+			});
+
+			$('.ipt2').click(function(){
+				$(this).removeAttr('placeholder');
+			});
+
+			$('.cl').click(function(){
+				oAll.css('opacity','1');
+				oAll.css('WebkitTransition','1s all ease')
+				oAll.css('WebkitTransform','none');
+			});
+		});
+	</script>
+</body>
+</html>

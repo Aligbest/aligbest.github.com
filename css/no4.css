@@ -1,0 +1,80 @@
+body{overflow: hidden;}
+    .all{
+        width:100%;
+        background:url(../img/module3.jpg) no-repeat;
+        background-size: 100% 100%;
+        z-index: -2;
+    }
+    .box{
+        height:100%;
+        padding-top: 20px;
+    }
+    .box .list{ 
+        width:300px; 
+        height:400px; 
+        margin:50px auto; 
+        position:relative;
+    }
+    .box li{ 
+        width:100%; 
+        height:100%; 
+        background: #dd75c8; 
+        color:white; 
+        font-size:100px; 
+        text-align:center; 
+        line-height:400px; 
+        position:absolute; top:0; left:0;
+        transition:0.5s all ease;  
+        opacity:0; 
+        display:none;
+        box-shadow: 0 0 10px white,0 0 10px white,0 0 10px white;
+    }
+    .box .now{ z-index:1; opacity:1; display:block;}
+    .box .pre{ transform:perspective(800px) translateX(-330px) rotateY(50deg); opacity:0.7; display:block;}
+    .box .pre2{ transform:translateX(-900px);  display:block;}
+    .box .next{ transform:perspective(800px) translateX(330px) rotateY(-50deg); opacity:0.7; display:block;}
+    .box .next2{ transform:perspective(800px) translateX(900px) rotateY(-50deg);  display:block;}
+    .box p input{
+        border-radius: 5px;
+        width: 100px;
+        height: 40px;
+        color: white;
+        border:none;
+        font-weight: bold;
+        font-family: '楷体';
+        font-size: 20px;
+        margin:0 30px 0 30px;
+        cursor: pointer;
+        opacity: 0.7;
+        text-shadow: 0 0 10px black;
+    }
+    .box p input:hover{
+        opacity:0.7;
+        box-shadow: 0 0 10px white;
+    }
+    .list a{
+        display:block;
+        width: 100%;
+        height: 100%;
+    }
+    .no1{
+        background:url(../img/wy6.png);
+    }
+    .no2{
+        background:url(../img/wy1.png);
+    }
+    .no3{
+        background:url(../img/wy2.png);
+    }
+    .no4{
+        background:url(../img/wy3.png);
+    }
+    .no5{
+        background:url(../img/wy5.png);
+    }
+    .no6{
+        background:url(../img/wy4.png);
+    }
+    .no7{
+        background:url(../img/wy7.png);
+    }

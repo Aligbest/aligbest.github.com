@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>验证邮箱</title>
+<style type="text/css">
+    #box{
+        width: 173px;height: 200px;
+        border:1px solid #ccc;
+        border-radius: 5px;
+        background-image: linear-gradient(white,black);
+        margin: 20px;
+    }
+    #t1{
+        border-radius: 5px;;
+    }
+    #btn{
+        border-radius: 5px;
+        border:noen;
+        color:black;
+        font-size: 20px;
+        font-weight: bold;
+    }
+</style>
+<script type="text/javascript">
+window.onload = function(){
+     var oBtn = document.getElementById('btn');
+     var oT1 = document.getElementById('t1');
+     var oD1 = document.getElementById('d1');
+     var oS1 = document.getElementById('s1'); 
+
+     oBtn.onclick = function(){
+        var re = /^\w+@[0-9a-zA-Z-]+(\.[a-z]{2,6}){1,2}$/; 
+        if(oT1.value.match(re)){
+            oD1.innerHTML = '合法';
+            oD1.style.color = "green";
+            oS1.innerHTML = ''; 
+
+        }else{
+            oD1.innerHTML = '*非法';
+            oD1.style.color = "red";
+            oD1.style.fontWeight = 'bold';
+            oD1.style.fontFamily = '黑体';
+            oS1.innerHTML = '------请输入正确email';
+            oS1.style.color = "red";
+        };
+     };  
+}
+</script>
+</head>
+<body>
+    <div id="box">
+        <input type="text" id="t1" />
+        <input type="button" value="校验" id="btn" />
+        <div id="d1"></div>
+        <span id="s1"></span>
+    </div>
+</body>
+</html>

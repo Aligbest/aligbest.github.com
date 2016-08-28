@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content=" width=device-width,initial-scale=1.0,user-scalable=no,maximum-scale=1.0">
+    <meta charset="UTF-8" />
+    <title>rem布局</title>
+    <link rel="stylesheet" type="text/css" href="css/common.css" />
+    <link rel="stylesheet" type="text/css" href="css/phone.css" />
+    <script src="js/phone.js"></script>
+    <script src="js/onclick.js"></script>
+    <script src="js/touch.js"></script>
+    <style type="text/css">
+    .top{
+        background:black;
+        width:40px;
+        height:40px;
+        opacity:0.7;
+        text-align: center;
+        border-radius: 5px;
+        box-shadow: 0 0 10px white;
+        position:fixed;bottom:10px;right:10px;
+    }
+    .top a{
+        color:white;
+        line-height: 20px;
+        text-shadow: 0 0 10px white;
+    }
+    </style>
+</head>
+<body>
+    <!-- 头部开始 -->
+    <header>
+        <i><img src="img/x1.png" /></i>
+        <h2>HEXAGONE</h2>
+        <i><img src="img/x.png"  /></i>
+    </header>
+    <!-- 头部结束 -->
+
+    <!-- 内容开始 -->
+    <section>
+        <h2>HOMEPAGE</h2>
+
+        <!-- 轮播图   --> 
+        <div class="bg">
+            <ul>
+                <li>
+                    <img src="img/logo2.png" height="372" width="560" alt="3" />
+                    <div></div>
+                    <p>2</p>
+                </li>
+                <li>
+                    <img src="img/bg.png" height="372" width="560" alt="1" />
+                    <div></div>
+                    <p>A small caption</p>
+                </li>
+                <li>
+                    <img src="img/logo1.png" height="372" width="560" alt="2" />
+                    <div></div>
+                    <p>1</p>
+                </li>
+                <li>
+                    <img src="img/logo2.png" height="372" width="560" alt="3" />
+                    <div></div>
+                    <p>2</p>
+                </li>
+                <li>
+                    <img src="img/bg.png" height="372" width="560" alt="1" />
+                    <div></div>
+                    <p>A small caption</p>
+                </li>
+            </ul> 
+            <a href="javascript:;" class="bg-left"></a>
+            <a href="javascript:;" class="bg-right"></a>
+        </div>
+        
+        <!-- WELL,HELLO THERE标题内容 -->
+        <div class="title-box">
+            <h3>WELL,HELLO THERE!</h3>
+            <p>Chinese New Year is the most important festival for Chinese people all over the world. It is also called the Spring Festival or the Lunar New Year. The exact date of the Spring Festival on the Western calendar changes from year to year. However, Chinese New Year takes place between January 1 and February 19.</p>    
+        </div>
+    
+        <!-- 图文介绍内容 -->
+        <div class="title2">
+            <ul>
+                <li class="fl"><img src="img/phone.png" height="160" width="160" alt="" /></li>
+                <li class="fr">
+                    <h3>EASY TO USE!</h3>
+                    <p>There ㄞ ㄆ ㄌno point to 
+                    complicate your life!We build products that are easy to use and customize!</p>
+                </li>
+            </ul>
+            <ul style="margin-top:0.25rem;">
+                <li class="fl"><img src="img/pc.png" alt="" /></li>
+                <li class="fr">
+                    <h3>BUILT WITH CARE!</h3>
+                    <p>Patience is key when building for quality and speed!We take care of every possible aspect!</p>
+                </li>
+            </ul>
+        </div>
+        
+        <!-- SOME OF OUR WORKS标题内容 -->
+        <div class="title3">
+            <h3>SOME OF OUR WORKS!</h3>
+            <p>A gallery si essential in any template,so,if it's a mobile device,why not have atouch one! </p>
+            <ul>
+                <li class="bg1"></li>
+                <li class="bg2"></li>
+                <li class="bg3"></li>
+                <li class="bg4"></li>
+                <li class="bg5"></li>
+                <li class="bg6"></li>
+            </ul>
+        </div>
+
+        <!-- TESTIMONIALS（推荐）标题内容 -->
+        <div class="title4">
+            <h3>TESTIMONIALS</h3>
+            <p>The tesimonial slider is automatic , and it's drag enabled! Pretty awesome stuff! And it handles all kinds of variations!</p>
+            <ul>
+                <li class="yh"></li>
+                <li class="nr">Patience is key when building for quality and speed ！We take care of eveny possible aspect!</li>
+                <li><em>John Doe - Annoynmus Buyer</em></li>
+            </ul>
+        </div>
+        
+        <!-- GET SOCIAL WITH US标题内容 -->
+        <div class="title5">
+            <h3>GET SOCIAL WITH US!</h3>
+            <p>Get news,updates,and just hang around for a chit chat or two on our social networks!</p>
+            <div class="logo-box">
+               <a href="javascript:;"><img src="img/logo1.png" /></a>
+               <a href="javascript:;"><img src="img/logo2.png" class="logo2" /></a>              
+               <a href="javascript:;"><img src="img/logo3.png" /></a>
+            </div>
+        </div>
+        
+        <!-- 版权声明 -->
+        <div class="title6">
+            <div>
+                <p>COPYRIGHT 2013</p>
+                <p>ALL RIGHTS RESERVED</p>
+            </div>
+        </div>
+        <div class="top">
+            <a href="#">返 回<br/>顶 部</a>
+        </div>
+    </section>
+    <!-- 内容结束-->
+
+    <!-- 尾部开始 -->
+    <footer>
+        <ul>
+            <li class="icon-1"></li>
+            <li class="icon-2"></li>
+            <li class="icon-3"></li>
+            <li class="icon-4"></li>
+            <li class="icon-5"></li>
+            <li class="icon-6"></li>
+            <li class="icon-7"></li>
+            <li class="icon-8" style="margin:0;"></li>
+        </ul>
+        <p>TAP THE ICONS TO CHANGE THE MENU STYLE!</p>
+    </footer>
+    <!-- 尾部结束-->
+
+    <script type="text/javascript">
+        touch();
+        window.onload=function(){
+         show();
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+	* { 
+		margin:0; 
+		padding:0;
+	}
+	#div1 { 
+		width:310px; 
+		height:310px; 
+		float:left; 
+		margin-left:20px; 
+		margin-right:20px; 
+		position:relative;
+	}
+	#mask { 
+		display:none; 
+		width:100px; 
+		height:100px; 
+		background:yellow; 
+		opacity:0.3;  
+		position:absolute; 
+		left:0; top:0;
+	}
+	#div2 { 
+		display:none; 
+		width:310px; 
+		height:310px; 
+		float:left; 
+		position:relative; 
+		overflow:hidden;
+	}
+	#img1 { 
+		width:900px; 
+		height:900px; 
+		position:absolute; left:0; top:0;
+	}
+</style>
+<script>
+window.onload = function() {
+	var oDiv1 = document.getElementById("div1");
+	var oMask = document.getElementById("mask");
+	var oDiv2 = document.getElementById("div2");
+	var oImg = document.getElementById("img1");
+	
+	oDiv1.onmousemove = function(ev) {
+		var oEvent = ev || event;
+		
+		// 限定范围
+		var l = oEvent.clientX - oDiv1.offsetLeft - oMask.offsetWidth/2;
+		var t = oEvent.clientY - oDiv1.offsetTop - oMask.offsetHeight/2;
+		
+		var maxMoveW  = oDiv1.offsetWidth - oMask.offsetWidth;
+		var maxMoveH = oDiv1.offsetHeight - oMask.offsetHeight;
+		if (l < 0) {
+			l = 0;
+		} else if (l > maxMoveW) {
+			l = maxMoveW;
+		}
+		
+		if (t < 0) {
+			t = 0;
+		} else if (t > maxMoveH) {
+			t = maxMoveH;
+		}
+		
+		 // 比例  已有 l / 总共 maxMoveW
+		 var scaleX = l/maxMoveW;
+		 var scaleY = t/maxMoveH;
+		 
+		 oImg.style.left = -scaleX* (oImg.offsetWidth - oDiv2.offsetWidth) + "px";
+		  oImg.style.top = -scaleY* (oImg.offsetHeight - oDiv2.offsetHeight) + "px";
+		 
+		
+		oMask.style.left = l + "px";
+		oMask.style.top = t + "px";
+		
+	};
+	
+	// 当鼠标 移入 div1 让 oMask  oDiv2 显示
+	oDiv1.onmouseover = function() {
+		oMask.style.display = "block";
+		oDiv2.style.display = "block";
+	};
+	
+	// 当鼠标 移出 div1 让 oMask  oDiv2 隐藏
+	oDiv1.onmouseout = function() {
+		oMask.style.display = "none";
+		oDiv2.style.display = "none";
+	};
+};
+</script>
+</head>
+
+<body>
+	<div id="div1">
+    	<img src="image/m1.jpg" />
+        <span id="mask"></span>
+    </div>
+    <div id="div2">
+    	<img id="img1" src="image/b1.jpg" />
+    </div>
+</body>
+</html>

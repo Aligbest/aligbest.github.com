@@ -1,0 +1,36 @@
+
+  *{
+    margin:0;
+    padding:0;
+    list-style: none;
+    text-decoration: none;
+  }
+/* 导航样式 */
+  .all .module1 .nav,.all .module2 .nav,.all .module3 .nav,.all .module4 .nav,.all .module5 .nav{
+    margin:0px auto;
+    width: 750px;
+    height: 50px;
+    position: relative;
+    overflow: hidden;
+  }
+  .all .module1 .nav li,.all .module2 .nav li,.all .module3 .nav li,.all .module4 .nav li,.all .module5 .nav li{
+    float: left;
+    width: 150px;
+    height: 60px;
+    line-height: 50px;
+    text-align: center;
+    font-family: '楷体';
+    font-size: 20px;
+    position:relative;
+    z-index: 1;
+  }
+  .all .module1 .nav li a,.all .module2 .nav li a,.all .module3 .nav li a,.all .module4 .nav li a,.all .module5 .nav li a{color: white;}
+  .all .module1 .nav li.move,.all .module2 .nav li.move,.all .module3 .nav li.move,.all .module4 .nav li.move,.all .module5 .nav li.move{
+    width: 150px;
+    height: 50px;
+    position:absolute;top: 0;left: 0;
+    background: black;
+    opacity: 0.3;
+    border-radius: 10px;
+    z-index: 0;
+  }

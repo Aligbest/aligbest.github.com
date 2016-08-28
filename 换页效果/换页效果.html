@@ -1,0 +1,289 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+	body{
+		background:black;
+		overflow:hidden;
+	}
+	*{ padding:0; margin:0; list-style:none;}
+	.box{ width:700px; height:400px; border:1px solid red; margin:50px auto; background:url(img2/0.jpg); position:relative; -webkit-transform-style:preserve-3d;}
+	
+	.page{ width:50%; height:100%; position:absolute; right:0; top:0; -webkit-transform-style:preserve-3d; transition:1s all ease; -webkit-transform-origin:left; z-index:10; -webkit-transform:perspective(800px) rotateY(0deg);}
+	.page span{width:100%; height:100%;position:absolute; top:0; left:0;}
+	.front{ -webkit-transform:translateZ(1px); background:url(img2/0.jpg) right 0;}
+	.back{ -webkit-transform:translateZ(-1px) scale(-1,1); background:url(img2/1.jpg); }
+	.page2{ width:50%; height:100%; background:url(img2/1.jpg) right 0; position:absolute; top:0; right:0; }
+	
+	
+
+	.box1{ width:700px; height:400px; background:url(img2/1.jpg); margin:120px auto; position:relative; }
+	.box1 span{ -webkit-transform:perspective(800px) translate(0px,0px) rotateY(0deg) rotateX(0deg) scale(1);}
+	#bang{
+		position:fixed;top:50%;left:0;
+	}
+	#fy{
+		position:fixed;top:50%;left:40px;
+	}
+
+
+	.box2{ width:700px; height:400px; background:#EEE; margin:50px auto; position:relative;}
+	.box2 i,.box2 b{ position:absolute; top:0; left:0;width:100%; height:100%;}
+	.box2 span{ transform-style:preserve-3d; transform:perspective(800px) rotateY(0deg); }
+	.box2 i{ background:url(img2/0.jpg); z-index:1; backface-visibility:hidden;}
+	.box2 b{ background:url(img2/1.jpg); z-index:0; -webkit-transform:scale(-1,1);}
+	li,div{background-size: 100% 100%;}
+	.ul1{overflow:hidden;position:fixed;top: 50%;}
+	.ul1 li{
+		float: left;
+		margin-right:20px;
+		border:1px solid white;
+		border-radius: 5px;
+	}
+	.ul1 a{
+		display: block;
+		font-size: 25px;
+		font-family: '楷体';
+		font-weight: bold;
+		text-shadow: 0 0 10px white;
+		color: white;
+		text-decoration: none;
+	}
+	.box{
+		z-index: 1;
+	}
+	.box,.box1,.box2{
+		position:absolute;top: 100px;left:205px;
+		margin:0;
+		padding:0;
+		border:none;
+		box-shadow: 0 0 10px white, 0 0 20px black, 0 0 10px white;
+		border-radius: 5px;
+	}
+	.box2{
+		background:transparent;
+	}
+</style>
+<script>
+	window.onload=function(){
+
+		//翻页开始
+		(function(){
+			var oBox=document.querySelector('.box');
+			var oPage=document.querySelector('.page');
+			var oF=document.querySelector('.front');
+			var oB1=document.querySelector('.back');
+			var p2=document.querySelector('.page2');
+			var oFy=document.querySelector('.fy');
+			var oBox1=document.querySelector('.box1');
+			var oBox2=document.querySelector('.box2');
+			
+			var iNowone=0;
+			var bReady=true;
+			oFy.onclick=function(){
+				oBox.style.opacity='1';
+				oBox1.style.opacity='0';
+				oBox2.style.opacity='0';
+				if(!bReady)return;
+				bReady=false;
+				oPage.style.WebkitTransition='1s all ease';
+				oPage.style.WebkitTransform='perspective(800px) rotateY(-180deg)';
+				iNowone++;
+			};
+			
+			oPage.addEventListener('transitionend',function(){
+				oPage.style.WebkitTransition='none';
+				oPage.style.WebkitTransform='perspective(800px) rotateY(0deg)';
+				
+				
+				oBox.style.background='url(img2/'+iNowone%3+'.jpg)';
+				
+				oF.style.background='url(img2/'+iNowone%3+'.jpg) right 0';
+				oB1.style.background='url(img2/'+(iNowone+1)%3+'.jpg) ';
+				p2.style.background='url(img2/'+(iNowone+1)%3+'.jpg) right 0';
+				
+				bReady=true;
+			},false);
+			//翻页结束
+		})()
+		
+
+		//爆炸开始
+			var oBox=document.querySelector('.box');
+			var oBox1=document.querySelector('.box1');
+			var oBox2=document.querySelector('.box2');
+			var oBz=document.querySelector('.bz');
+			function rnd(n,m){
+				return parseInt(Math.random()*(m-n)+n);
+			}
+
+			
+			var C=7;
+			var R=4;
+			for(var i=0; i<R;i++){
+				for(var j=0;j<C;j++){
+					var oSpan=document.createElement('span');
+					oSpan.style.width=oBox1.offsetWidth/C+'px';
+					oSpan.style.height=oBox1.offsetHeight/R+'px';
+					oSpan.style.position='absolute';
+					
+					oBox1.appendChild(oSpan);
+					
+					oSpan.style.left=j*oSpan.offsetWidth+'px';
+					oSpan.style.top=i*oSpan.offsetHeight+'px';
+					oSpan.style.background='url(img2/0.jpg)';
+					oSpan.style.backgroundPosition=-j*oSpan.offsetWidth+'px '+-i*oSpan.offsetHeight+'px';
+					
+				}	
+			}
+			
+			var iNow=0;
+			var aSpan=oBox1.children;
+			var bReady1=true;
+			oBz.onclick=function(){
+				oBox.style.opacity='0';
+				oBox1.style.opacity='1';
+				oBox2.style.opacity='0';
+				if(!bReady1)return;
+				bReady1=false;
+				iNow++;
+				for(var i=0;i <aSpan.length;i++){
+					
+					aSpan[i].style.WebkitTransition='.8s all ease';
+					
+					var spanX=aSpan[i].offsetLeft+aSpan[i].offsetWidth/2;
+					var spanY=aSpan[i].offsetTop+aSpan[i].offsetHeight/2;
+					var x=spanX- oBox1.offsetWidth/2;
+					
+					var y=spanY-oBox1.offsetHeight/2;
+					
+					
+					
+					aSpan[i].style.WebkitTransform='perspective(800px) translate('+x+'px,'+y+'px) rotateY('+rnd(0,180)+'deg) rotateX('+rnd(0,180)+'deg) scale(1.5)';
+					aSpan[i].style.opacity=0;
+				}	
+			};
+			
+			aSpan[0].addEventListener('transitionend',function(){
+					for(var i=0;i<aSpan.length;i++){
+						aSpan[i].style.WebkitTransition='none';
+						aSpan[i].style.WebkitTransform='perspective(800px) translate(0px,0px) rotateY(0deg) rotateX(0deg) scale(1)';
+						aSpan[i].style.opacity=1;
+						
+						aSpan[i].style.backgroundImage='url(img2/'+iNow%3+'.jpg)';
+						oBox1.style.backgroundImage='url(img2/'+(iNow+1)%3+'.jpg)';
+					}
+					
+					bReady1=true;
+			},false);
+		//爆炸结束
+
+
+		//颗粒
+		(function(i){
+			var oBox=document.querySelector('.box');
+			var oBox1=document.querySelector('.box1');
+			var oBox2=document.querySelector('.box2');
+			var oKl=document.querySelector('.kl');
+			var R=4;
+			var C=7;
+			for(var i=0; i<R;i++){
+				for(var j=0;j<C;j++){
+					var oSpan2=document.createElement('span');
+					oSpan2.style.width=oBox2.offsetWidth/C+'px';
+					oSpan2.style.height=oBox2.offsetHeight/R+'px';
+					oSpan2.style.position='absolute';
+					
+					oBox2.appendChild(oSpan2);
+					
+					oSpan2.style.left=j*oSpan2.offsetWidth+'px';
+					oSpan2.style.top=i*oSpan2.offsetHeight+'px';
+					
+					
+					oSpan2.innerHTML='<i></i><b></b>';
+					
+					var oI=oSpan2.children[0];
+					var oB=oSpan2.children[1];
+
+					oI.style.backgroundPosition=-j*oSpan2.offsetWidth+'px '+-i*oSpan2.offsetHeight+'px';
+					oB.style.backgroundPosition=-j*oSpan2.offsetWidth+'px '+-i*oSpan2.offsetHeight+'px';
+					
+					
+					oSpan2.c=j;
+					oSpan2.r=i;
+				}
+			}
+			
+			
+			var iNowtwo=0;
+			var aSpan2=oBox2.children;
+			var bReady2=true;
+			oKl.onclick=function(){
+				oBox.style.opacity='0';
+				oBox1.style.opacity='0';
+				oBox2.style.opacity='1';
+				if(!bReady2)return;
+				bReady2=false;
+				iNowtwo++;
+				for(var i=0; i<aSpan2.length;i++){
+					aSpan2[i].style.WebkitTransition='1s all ease '+(aSpan2[i].c+aSpan2[i].r)*200+'ms';
+					aSpan2[i].style.WebkitTransform='perspective(800px) rotateY(180deg)';
+				}	
+			};
+			
+			aSpan2[aSpan2.length-1].addEventListener('transitionend',function(){
+				for(var i=0; i<aSpan2.length;i++){
+					aSpan2[i].style.transition='none';
+					aSpan2[i].style.transform='perspective(800px) rotateY(0deg)';
+					
+					var oI=aSpan2[i].children[0];
+					var oB=aSpan2[i].children[1];
+					
+					oI.style.backgroundImage='url(img2/'+iNowtwo%3+'.jpg)';
+					oB.style.backgroundImage='url(img2/'+(iNowtwo+1)%3+'.jpg)';
+					
+					bReady2=true;
+				}
+				
+					
+			},false);
+		})(i)
+
+	};
+</script>
+</head>
+
+<body>
+	<div style="position:relative;">
+		<div class="box">
+	    	<div class="page">
+	        	<span class="front"></span>
+	            <span class="back"></span>
+	        </div>
+	        <div class="page2"></div>
+	    </div>
+	    <div class="box1"></div>
+	    <div class="box2"></div>
+	</div>
+	
+
+    <ul class="ul1">
+    	<li><a href="javascript:;" class="fy">翻页</a></li>
+    	<li><a href="javascript:;" class="bz">爆炸</a></li>
+    	<li><a href="javascript:;" class="kl">颗粒</a></li>
+    </ul>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

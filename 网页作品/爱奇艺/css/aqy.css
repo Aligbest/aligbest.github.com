@@ -1,0 +1,129 @@
+@charset "utf-8";
+/* CSS Document */
+a:hover {color: #8ac024}
+.a-2:hover .ys{display: block;position:absolute;top: 30px;left:1210px; }
+
+.box{margin:0 auto;width: 1000px;}
+.ys{width: 65px;height: 125px;background-color:#cfcfcf;position: absolute;top: 15;left: -10;border-radius: 3%;color: black;display: none;}
+.a-1:hover .ys{display: block;}
+/*头部开始*/
+.head{background: url(img/1.jpg) no-repeat;height: 516px;}
+.column{height: 40px;}
+.column input{height: 30px;width: 227;position: relative;background-color: transparent;}
+.sqw{border: 1px solid #bebebe;height: 30px;width: 319px; margin-left: 500px;margin-top: 6px;}
+.sqw a{border: 1px solid green;position: relative;left: 2px;top: -1px;}
+
+.headd1{margin-top: -20px;}
+.headd1 a{color: white;}
+.headd1 .is1{position: relative;top:-10px; left: -5px;color: #f45910;
+	font-size: 50px;border-radius: 50%;margin: 0px;width: 0}
+.headd1 .is2{position: relative;top:-10px; left: -10;color: #f45910;
+	font-size: 50px;border-radius: 50%;}
+.img1{margin-left: -20px;}
+.columna{margin-left: -20px;}
+.lb{width: 260px;height: 371px;background:url(img/lb.png) no-repeat;}
+.lb li{margin-left: 17px;width: 210px;height: 34px;margin-top: ;}
+.lb li a{color: white;font-size: 12px;line-height: 34px;padding-left: 20px;}
+.lb li:hover{background-color: #75b200;}
+.lbl{margin-top: 18px;}
+.menu{height: 126px;width: 100%;background: url(img/aqybz.png) no-repeat 100px;
+	background-color: black;margin-top: -1px;}
+.yxpz{position: relative;top: 80px;left: 20px;}
+.menu ul{margin-top: 10px;}
+.menu ul li{margin-bottom: 10px;width: 5em;
+}
+.ul-1 li{margin-left: 5px;}
+
+
+/*头部结束*/
+
+
+/*今日焦点开始*/
+.jrjd{width: 380px;height: 42px;border-bottom: 2px solid #80a935;margin-top: 25px;margin-left: 10px;}
+.dubo{border: 1px solid #d2d2d2;border-radius: 10%;margin-top: 23px;}
+.jrjd h2,.jrjd p a{color: #80a935;padding-top: 20px;}
+.jrjd p {padding-top: 27px;margin-left: 5px;}
+.jrjd h2{font-size: 20px;}
+.dbxw{width: 380px;height: 227px;margin-left: 10px;}
+.dbxw h2 {margin-left: 20px;font-size: 20px;margin-top: 20px;}
+.dbxw p{margin-top: 10px;}
+.dbxw .p1{margin-top: 20px;}
+.zsn{width: 180px;margin-top: 10px;height: 137px;background-color: #f2f2f2}
+.zsn a{margin-left: 7px;line-height: 40px;}
+.spxw .sp{width: 379px;height: 211px;background: url(img/1-4.jpg) no-repeat;}
+.spxw .by{width: 379px;height: 41px;background-color: black;opacity: 0.5;position: relative;top: 170}
+.spxw .bya{position: relative;top: 136px;left: 7px;color: white}
+.spxw{position:relative;top: -20px;left: 20px;}
+.bjxw{margin-top: 155px;}
+.bjxw p{margin-top: 10px;font-size: 15px;}
+.yxw {width: 180px;position: absolute;top:565px;right: 180;height: 132px;
+}
+.yxw img{width: 194}
+.yxw div{width: 195;height: 130px;background-color: #f2f2f2;margin-bottom: 5px;text-align: center;line-height: 20px;}
+
+
+
+/*今日焦点结束*/
+
+/*综艺开始*/
+.zy{width: 781px;margin-top: 30px;margin-left: 10px;}
+.zygd{border-bottom: 2px solid #8ac024;height: 40px;}
+.zygd h2,.zygd .al{color: #7dac22;line-height: 35px;}
+.zygd .al{line-height: 40px;margin-left: 10px;}
+.zygd .ascm{line-height: 40px; }
+.ascm a{font-weight: bold;}
+.zygd .ascm span{color: #dedede;font-size: 15px;margin:10px;}
+.zygd .hxek{margin-top: -30px;}
+.jctj{position: absolute;right: 180px;top: 963px;border-bottom:2px solid #8ac024;width: 180px; }
+.sn{margin-top: 30px;height: 350px;width: 380px;}
+.sn dl{height: 53px;background-color: #f2f2f2;width: 407px;margin-top: ;}
+.sn dd{color: #ababab;margin-top: 10px;}
+.sn{background: url(img/today.png) no-repeat ;}
+.nxsm {position: absolute;left: 595px;top: 1035px;}
+.xajh{position: absolute;top: 0px;left: 201px;}
+.qq{position: absolute;top: 200px;left: -200px;}
+.zxc{position: absolute;top: 200px;left: 0}
+.zy ul li{background-color: #f2f2f2}
+.tfboys{position: absolute;top: -200px;left: 200px;}
+.tfboys img{width: 180px;height: 325px;}
+.sxt{width: 170px;height: 115px;}
+/*综艺结束*/
+
+/*跑男开始*/
+
+.paonan{height: 20px; float: left;border-bottom: 1px solid #e1e1e1;width:90%;margin-left: 10px;width: 980px;}
+.paonan .hl,.al{color: #699f00;margin:0 5 0 5px;}
+
+.paonan .al{line-height: 20px;}
+.paonan1 li{margin-left: 15px;width: 182px;}
+.paonan1 {margin-top: 40px; }
+.ylgd a{position: relative;top: 200}
+
+
+/*跑男结束*/
+
+
+/*推广广告开始*/
+
+.tggg{width:983px;height: 162px; border:2px solid #8ac024;border-left: none;margin-top: 61px;}
+.tggg-1{position: relative;top: -20;left: 0;border-radius: 10%;text-align: center;line-height: 20px;margin-left: none;margin-right:0;}
+.tgli1{line-height: 140px;}
+.tggg ul li{margin:1px 7px;}
+.dyli1{margin-right: 20px;}
+
+/*推广广告结束*/
+
+
+.os1{width: 20;height: 20;background-color: #73ae00;line-height: 20px;text-align: center;color: white;margin-right: 5px;
+}
+
+.os12{width: 20;height: 20;background-color: #a8a8a8;line-height: 20px;text-align: center;color: white;margin-right: 5px;
+}
+.alig li{margin-top: 15px;width: 6em;margin-left: 20px;}
+.alig .aaa{margin:15px 0 0 30px;width: 15em;}
+.alig{margin-top: 43px;}
+
+
+.foot{background-color: #ffffff;border-top: 1px solid #ccc;margin-top: 48px;width: 100%}
+
+.foot p{color: #666666}

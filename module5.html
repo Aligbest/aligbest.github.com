@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>小作品</title>
+<link rel="stylesheet" type="text/css" href="css/All.css" />
+<script src="js/nav5.js"></script>
+<script src="js/move.js"></script>
+<script src="js/move2.js"></script>
+<style type="text/css">
+    .all{
+        width:100%;
+        background:url(img/module5.jpg) no-repeat;
+        background-size: 100% 100%;
+        z-index: -2;
+    }
+    body{
+        overflow:hidden;
+    }
+    #box{
+        width:800px; 
+        height:450px; 
+        margin:100px auto; 
+        position:relative; top:0; left:0; 
+        overflow:hidden;
+        border-radius: 10px;
+        box-shadow: 0 0 10px green;
+    }
+    #box li{
+        width:100%; 
+        height:450px; 
+        position:absolute; top:0; left:0;
+    }
+    #box li img{width:100%;}
+    .left{
+        height:100%;
+        width:40px;
+        background:black;
+        position:absolute;left: 0;
+        text-align: center;
+        font-weight: bold;
+        font-family: cursive;
+        font-size: 25px;
+        opacity: 0.5;
+        color: red;
+    }
+    .left span{
+        display: block;
+        width: 35px;
+        height: 25px;
+        border-radius: 50%;
+        border: 1px solid white;
+        box-shadow: 0 0 10px white;
+        padding-bottom: 12px;
+        margin:5px 2px 2px;
+    }
+</style>
+</head>
+
+<body>
+    <div class="all">
+        <div class="module5">
+            <ul class="nav" id="nav">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="module2.html">掌握</a></li>
+                <li><a href="module3.html">3D环展示</a></li>
+                <li><a href="module4.html">网页展示</a></li>     
+                <li><a href="javascript:;">小作品展示</a></li>
+                <li class="move"> </li>
+            </ul>
+        </div>
+        
+        <!-- 手风琴效果盒子 -->
+        <ul id="box">
+            <li>
+                <div class="left"><span style="color:orange;">A</span></div>
+                <a href="www/xy/xyq.html" target="_blank">
+                    <img src="img/move4.png"/>
+                </a>
+            </li> 
+
+            <li>
+                <div class="left"><span>B</span></div>
+                <a href="换页效果/换页效果.html" target="_blank">
+                    <img src="img/move1.png"/>
+                </a>
+            </li> 
+
+            <li>
+                <div class="left"><span style="color:green;">C</span></div>
+                <a href="网页作品/百度/baidu.html" target="_blank">
+                    <img src="img/move2.png"/>
+                </a>
+            </li> 
+
+            <li>
+                <div class="left"><span style="color:blue;">D</span></div>
+                <a href="绿巨人大头/绿巨人大头.html" target="_blank">
+                    <img src="img/move3.png"/>
+                </a>
+            </li>
+           
+        </ul>
+
+        <div style="padding-bottom:500px;"></div>
+    </div>
+
+    <script type="text/javascript">
+    window.onload = function(){
+        //导航引用nav.js；
+        nav();
+
+        //手风琴效果move2.js
+        move2();
+    }
+    </script>
+</body>
+</html>

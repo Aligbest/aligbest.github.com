@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>首页</title>
+<link rel="stylesheet" type="text/css" href="css/All.css" />
+<link rel="stylesheet" type="text/css" href="css/newno1.css" />
+<script src="js/nav.js"></script>
+<script src="js/time.js"></script>
+<script src="js/new1.js"></script>
+<script src="js/iscroll.js"></script>
+</head>
+
+<body>
+    <div class="all" id="all">
+        <!-- 导航开始 -->
+        <div class="module1">
+            <ul class="nav" id="nav">
+                <li><a href="javascript:;">首页</a></li>
+                <li><a href="module2.html">掌握</a></li>
+                <li><a href="module3.html">3D环展示</a></li>
+                <li><a href="module4.html">网页展示</a></li>   
+                <li><a href="module5.html">小作品展示</a></li>
+                <li class="move"> </li>
+            </ul>
+        </div>
+        <!-- 导航结束 -->
+        <div class="time"></div>
+        
+        <!-- 第一面板 -->
+        <div class="box1">
+            <ul class="motto">
+                <li class="li-1">坚持者能在命运风暴中奋斗。</li>
+                <li class="li-2">壮志与毅力是事业的双翼。</li>
+                <li class="li-3">最可怕的敌人，就是没有坚强的信念。</li>
+                <li class="li-4">耐心之树，结黄金之果。</li>
+                <li class="li-5"><a href="#know">点击这里欣赏短文&gt;</a></li>
+            </ul>
+            <!-- 底部三角形 -->
+            <div class="sjx"></div>
+        </div>
+
+        <!-- 第二面板 -->
+        <div class="box1 box2" id="know">
+            <!-- 左上角绿条 -->
+            <div class="lt">ЖЖЖЖЖЖ</div>
+
+            <!-- 头像 -->
+            <div class="photo"></div>
+
+            <!-- 文章 -->
+            <div class="alig">
+                <div class="article"></div>
+            </div>
+
+            <!-- 二维码 -->
+            <div class="qq">
+            <img src="img/weixin.jpg" height="196" width="184" alt="微信" title="扫一扫添加微信" />
+                <img src="img/QQ.jpg" height="196" width="184" alt="QQ" title="扫一扫添加QQ"/>
+            </div>
+            
+            <!-- 底部三角形 -->
+            <div class="sjx2"></div>
+        </div>
+
+        <div class="foot">
+            <a href="#" class="totop"></a>
+            <div class="footbox">
+                <p> © 2016 | Alig</p>
+                <p>Website designed by<a href="javascript:;">Alig.com</a></p>
+            </div>
+            
+        </div>
+    </div>
+
+    <script type="text/javascript">
+    window.onload = function(){
+
+        var  myScroll = new IScroll('.alig',{
+             scrollbars: true, //有滚动条
+             mouseWheel: true, //允许滚轮滚动
+             interactiveScrollbars: true, //允许拖拽滚动条
+             shrinkScrollbars: 'scale', //滚动大小，成比例
+             fadeScrollbars: true, //上去隐藏滚动条
+             bounceEasing: 'elastic',  //运动形式
+             bounceTime: 3200  //运动时间
+        });
+
+        //new1.js;
+        show();
+
+        //时间time.js;
+        time();
+        setInterval(time,1000);
+
+        //导航引用nav.js;
+        nav();
+
+            
+    }
+    </script>
+</body>
+</html>

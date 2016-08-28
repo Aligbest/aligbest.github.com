@@ -1,0 +1,137 @@
+<html>
+<head>
+<title></title>
+<style type="text/css">
+    *{margin: 0;left: 0;list-style: none;}
+    #ul1{position: relative;width: 688px;margin: 30px auto;line-height: 150px;text-align: center;}
+    #ul1 li{float: left;width: 150px;height: 150px;margin: 10px;border:10px solid black;}
+    li img{width: 150px;height: 150px;}
+
+</style>
+<script type="text/javascript" src="move6.js"></script>
+<script type="text/javascript">
+window.onload = function(){
+	var oUl = document.getElementById('ul1');
+	var aLi = oUl.getElementsByTagName('li');
+	var aImg = document.getElementsByTagName('img');
+	var zIndex = 1;
+
+    var aPos = [];
+	for (var i = 0; i < aLi.length; i++) {
+		aPos.push({left:aLi[i].offsetLeft,top:aLi[i].offsetTop});
+		aLi[i].style.left = aPos[i].left + "px";
+		aLi[i].style.top = aPos[i].top + "px";		
+	};
+	for (var i = 0; i < aLi.length; i++) {
+		aLi[i].index = i;
+		aLi[i].style.position = "absolute";
+		aLi[i].style.margin = 0;
+		drag(aLi[i]);
+
+	};
+
+	function drag(obj){
+		obj.onmousedown = function(ev){
+            clearInterval(obj.timer);
+			var oEvent = ev || event;
+			var disX = oEvent.clientX - obj.offsetLeft;
+			var disY = oEvent.clientY - obj.offsetTop;
+			obj.style.zIndex = zIndex++;
+
+			document.onmousemove = function(ev){
+				var oEvent = ev || event;
+				obj.style.left = oEvent.clientX-disX + 'px';
+				obj.style.top = oEvent.clientY - disY + 'px';
+
+				var newObj = findNearest(obj);							
+					var n = obj.index;
+					var m = newObj.index;
+					for (var i = 0; i < aLi.length; i++) {
+						if (n < m) {
+							if (n < aLi[i].index&&aLi[i].index <= m) {
+								aLi[i].index--;
+								startMove(aLi[i],aPos[aLi[i].index])
+							};
+						}else if (n > m) {
+							if (n > aLi[i].index&&aLi[i].index >= m) {
+								aLi[i].index++;
+								startMove(aLi[i],aPos[aLi[i].index])
+							};
+						};
+					};
+				
+				obj.index = m;
+			}
+
+			document.onmouseup = function(){
+				document.onmousemove = document.onmouseup = null;
+				//------回位置
+				startMove(obj,aPos[obj.index]);				
+			}
+			return false;
+		}
+	}
+     
+	function getDis(obj1,obj2){
+		var a = aPos[obj2.index].left - obj1.offsetLeft;
+		var b = aPos[obj2.index].top - obj1.offsetTop;
+
+		return Math.sqrt(a*a + b*b);
+    }
+
+    function findNearest(obj){
+    	var minDis = 999999999;
+    	var minDisIndex = -1;
+    	for (var i = 0; i < aLi.length; i++) {
+    		if (obj == aLi[i]) continue;
+    		if (collTest(obj,aLi[i])) {
+    			var dis = getDis(obj,aLi[i])
+    			if (dis < minDis) {
+    				minDi = dis;
+    				minDisIndex = i;
+    			};
+    		};
+    	};
+
+    	if (minDisIndex == -1) {
+    		return null;
+    	}else {
+    		return aLi[minDisIndex];
+    	}
+    }
+
+
+	function collTest(obj1,obj2){
+		var l1 = obj1.offsetLeft;
+		var t1 = obj1.offsetTop;
+		var r1 = l1+obj1.offsetWidth;
+		var b1 = t1+obj1.offsetHeight;
+
+		var l2 = aPos[obj2.index].left;
+		var t2 = aPos[obj2.index].top;
+		var r2 = l2+obj2.offsetWidth;
+		var b2 = t2+obj2.offsetHeight;
+
+		if (r1 < l2 || b1 < t2 || l1 > r2 || t1 > b2) {
+			return false;
+		}else{
+			return true;
+		}
+	}
+}
+</script>
+</head>
+<body>
+<ul id="ul1">
+	<li><img src="1.png"></li>
+	<li><img src="2.png"></li>
+	<li><img src="3.png"></li>
+	<li><img src="4.png"></li>
+	<li><img src="5.png"></li>
+	<li><img src="6.png"></li>
+	<li><img src="7.png"></li>
+	<li><img src="8.png"></li>
+	<li><img src="9.png"></li>
+</ul>
+</body>
+</html>

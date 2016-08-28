@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+	* { 
+		margin:0; 
+		padding:0; 
+		list-style:none;
+	}
+	#div1 { 
+		width:966px; 
+		margin:0 auto;
+	}
+	#div1 ul { 
+		width:300px; 
+		margin:0 10px; 
+		float: left; 
+		box-shadow: 0 0 10px red;
+	}
+	#div1 ul li { 
+		width:100%; 
+		background:black; 
+		margin:10px 0;
+	}
+</style>
+<script>
+window.onload = function() {
+	var oDiv = document.getElementById("div1");
+	var aUl = oDiv.children;
+	
+	// 先创建20Li
+	function createLi() {
+		for (var i = 0; i < 20; i++) {
+			// 创建Li
+			var oLi = document.createElement("li");
+			oLi.style.height = Math.floor((Math.random() * 350 + 50)) + "px";
+			
+			// 排序  aUl 一个伪数组不能直接排序 
+			var arr = [];
+			for (var j = 0; j < aUl.length; j++) {
+				arr.push(aUl[j]);
+			}
+			arr.sort(function(oUl1, oUl2) {
+				return oUl1.offsetHeight - oUl2.offsetHeight;
+			});
+			
+			// 插入ul
+			arr[0].appendChild(oLi);
+		}
+	}
+	createLi();
+	
+	// 判断到底
+	window.onscroll = function() {
+		// 滚动高度
+		var scrollTop = document.documentElement.scrollTop || document.body.scrollTop
+		// 可视区的高度
+		var clientH = document.documentElement.clientHeight;
+		
+		// body的内容高度
+		var bodyH = document.body.scrollHeight;
+		
+		console.log(bodyH ,scrollTop , clientH);
+		
+		if (bodyH <= scrollTop + clientH) {
+			alert("到底了");
+			
+			// 再来20个li
+			createLi();
+		}
+		
+	};
+};
+</script>
+</head>
+
+<body>	
+	<div id="div1">
+    	<ul></ul>
+    	<ul></ul>
+    	<ul></ul>
+    </div>
+</body>
+</html>

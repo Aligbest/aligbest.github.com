@@ -1,0 +1,128 @@
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>百度预测搜索</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-decoration: none;
+        }
+        body{overflow:hidden;}
+        .box .logo {
+            text-align: center;
+        }
+
+        .search_box {
+            text-align: center;
+            overflow: hidden;
+            width: 644px;
+            margin: 100px auto;
+            margin-bottom: 0;
+        }
+
+        .search_box input {
+            width: 540px;
+            height: 34px;
+            float: left;
+            border:1px solid #ccc;
+        }
+
+        .search_box a {
+            width: 100px;
+            height: 36px;
+            float: left;
+            text-align: center;
+            line-height: 36px;
+            background: #3385ff;
+            color: #fff;
+            font-size: 14px;
+        }
+
+        .down_list {
+            width: 644px;
+            margin: 0 auto;
+        }
+
+        .down_list ul {
+            width: 540px;
+            border:1px solid #ccc;
+            margin-top: -2px;
+        }
+
+        .down_list ul li {
+            height: 35px;
+            line-height: 35px;
+            padding-left: 10px;
+        }
+    </style>
+    <script src="jsonp.js"></script>
+    <script>
+        window.onload = function () {
+            var oInp = document.getElementsByTagName('input')[0];
+            var oGo = document.getElementById('bd_go');
+            var oDownList = document.getElementById('down_list');
+            var oUl = oDownList.children[0];
+            var aLi = oUl.getElementsByTagName('li');
+            var aA = oUl.getElementsByTagName('a');
+            oInp.onkeyup = function () {
+                jsonp({
+                    url: 'https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su',
+                    data: {
+                        wd: this.value
+                    },
+                    success: function (json) {
+                        var arr = json.s;
+                        oUl.innerHTML = '';
+                        oUl.style.display = 'block';
+                        for (var i = 0; i < arr.length; i++) {
+                            var oLi = document.createElement('li');
+                            oLi.innerHTML = '<a href="javascript:;">' + arr[i] + '</a>';
+                            oUl.appendChild(oLi);
+                            oLi.onmouseover = function () {
+                                this.style.background = '#eee';
+                            };
+                            oLi.onmouseout = function () {
+                                this.style.background = '#fff';
+                            };
+                            oLi.onclick = function () {
+                                oInp.value = this.children[0].innerHTML;
+                                oUl.style.display = 'none';
+                                fnSearch();
+                            };
+                        }
+                    }
+                });
+            };
+            oGo.onclick = fnSearch;
+            function fnSearch() {
+                window.open('https://www.baidu.com/s?wd=' + oInp.value, '_self');
+            }
+
+        };
+    </script>
+</head>
+
+<body>
+<div class="box">
+    <h1 class="logo">
+        <img src="bd_logo1.png" width="270" alt="百度LOGo" />
+    </h1>
+
+    <div class="search_box">
+        <input type="text"/>
+        <a href="javascript:;" id="bd_go">佰度壹下</a>
+    </div>
+    <div class="down_list" id="down_list">
+        <ul>
+        </ul>
+    </div>
+</div>
+</body>
+</html>
+
+
+

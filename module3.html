@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>3D环</title>
+<link rel="stylesheet" type="text/css" href="css/All.css" />
+<link rel="stylesheet" type="text/css" href="css/no3.css" />
+<script src="js/nav3.js"></script>
+<script src="js/show.js"></script>
+</head>
+
+<body>
+    <div class="all">
+
+        <!-- 导航开始 -->
+        <div class="module3">
+            <ul class="nav" id="nav">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="module2.html">掌握</a></li>
+                <li><a href="javascript:;">3D环展示</a></li>
+                <li><a href="module4.html">网页展示</a></li>     
+                <li><a href="module5.html">小作品展示</a></li>
+                <li class="move" style="left:300.2px;"> </li>
+            </ul>
+        </div>
+        <!-- 导航结束 -->
+
+        <!-- 3D环开始 -->
+        <div class="box">
+            <ul id="ul1"></ul>
+        </div>
+        <!-- 3D环结束 -->
+    </div>
+
+    <script type="text/javascript">
+    window.onload = function(){
+    
+        //导航引用nav.js；
+        nav(); 
+       
+        //3D环show.js；
+        show();
+              
+    }
+    </script>
+</body>
+</html>

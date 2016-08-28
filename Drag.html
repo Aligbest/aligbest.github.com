@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+	*{margin:0; padding:0;}
+	body{
+		background: black;
+	}
+	#box{
+		width:100px; 
+		height:100px; 
+		background:red; 
+		position:absolute; top:0; right:0;
+		background:url(img/2.png) no-repeat;
+		border-radius: 50%;
+		background-size: 100% 100%;
+		box-shadow: 0 0 10px white;
+	}
+	input{
+		margin-top: 50px;
+	}
+</style>
+<script>
+window.onload=function(){
+	var oBox = document.getElementById('box');
+	var oBtn = document.getElementById('btn1');
+	var aPos = [];
+	//[{left:0,top:0},{left:0,top:0},{left:0,top:0},{left:0,top:0}]
+	oBox.onmousedown=function(ev){
+		var oEvent = ev||event;
+		var disX = oEvent.clientX-oBox.offsetLeft;
+		var disY = oEvent.clientY-oBox.offsetTop;
+		aPos.push({left:oBox.offsetLeft,top:oBox.offsetTop});
+		document.onmousemove=function(ev){
+			var oEvent = ev||event;
+			var l = oEvent.clientX-disX;
+			var t = oEvent.clientY-disY;
+			if(l<0){
+				l = 0;
+			}else if(l > (document.documentElement.clientWidth - oBox.offsetWidth)){
+				l = document.documentElement.clientWidth - oBox.offsetWidth;
+			}
+			if(t < 0){
+				t = 0;
+			}else if(t > (document.documentElement.clientHeight - oBox.offsetHeight)){
+				t = document.documentElement.clientHeight - oBox.offsetHeight;
+			}
+			oBox.style.left = l + 'px';
+			oBox.style.top = t + 'px';
+			
+			aPos.push({left:l,top:t});
+		};
+		document.onmouseup = function(){
+			document.onmousemove = null;
+			document.onmouseup = null;
+			oBox.releaseCapture && oBox.releaseCapture();
+		};
+		oBox.setCapture && oBox.setCpature();
+		return false;
+	};
+	var timer = null;
+	oBtn.onclick = function(){
+		clearInterval(timer);
+		timer = setInterval(function(){
+			var oPos = aPos.pop();
+			oBox.style.left = oPos.left + 'px';
+			oBox.style.top = oPos.top + 'px';
+			if(aPos.length == 0){
+				clearInterval(timer);
+			}
+		},30);
+	};
+};
+</script>
+</head>
+
+<body>
+<input type="button" value="回放" id="btn1" />
+<div id="box"></div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

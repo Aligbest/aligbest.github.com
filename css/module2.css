@@ -1,0 +1,210 @@
+/* 页面背景 */
+    .all{
+        width:100%;
+        background:url(../img/module3.jpg) no-repeat;
+        background-size: 100% 100%;
+        z-index: -2;
+        height: 1000px;
+    }
+
+    /* 方块各面宽高 */
+    .swiper-container {
+        width: 1000px;
+        height: 520px;
+        padding-top: 35px;
+        color:#FFF; font-size:50px; text-align:center;
+        position:relative;
+    }
+    .swiper-wrapper div{
+        height:100%;
+        border-radius: 10px;
+        box-shadow: 0 0 5px red;
+    }
+
+    /* 圆点样式 开始*/
+    .swiper-pagination{
+        width:100%;
+        height:25px;
+        z-index: 3;
+        position:absolute;left:50%;
+        margin-top: -50px;
+        margin-left: -70px;
+        overflow:hidden;
+        z-index: 111;
+    }
+    .swiper-pagination span{
+        width:25px;
+        height:25px;
+        display: block;
+        float: left;
+        background:red;
+        margin-left: 10px;
+    }
+    /* 圆点样式结束 */
+
+    /* 贴条样式 开始*/
+    .swiper-slide h2{
+        font-size: 70px;
+        font-weight: bold;
+        font-family: cursive;
+        -webkit-transform:perspective(800px) rotateZ(-15deg);
+        position:absolute;left:0;
+    }
+    .swiper-slide .h-1{
+        font-size: 70px;
+        font-weight: bold;
+        font-family: cursive;
+        -webkit-transform:perspective(800px) rotateZ(15deg);
+        position:absolute;right: -800px;
+    }
+    .swiper-slide .h-2{
+        font-size: 60px;
+        font-weight: bold;
+        font-family: cursive;
+        -webkit-transform:perspective(800px) rotateZ(-5deg);
+        position:absolute;right: 0px;top: 10px;
+    }
+    .swiper-slide .h-3{
+        font-size: 90px;
+        font-weight: bold;
+        font-family: cursive;
+        -webkit-transform:perspective(800px) rotateZ(10deg);
+        position:absolute;right: 0px;top: 150px;
+    }
+    .swiper-slide .h-4{
+        font-size: 100px;
+        font-weight: bold;
+        font-family: cursive;
+        -webkit-transform:perspective(800px) rotateZ(-25deg);
+        position:absolute;left: 10px;top: 20%;
+    }
+    .swiper-slide .h-5{
+        font-size: 70px;
+        font-weight: bold;
+        font-family: cursive;
+        -webkit-transform:perspective(800px) rotateZ(75deg);
+        position:absolute;left: -50px;top: 40%;
+    }
+    .swiper-slide .h-6{
+        font-size: 70px;
+        font-weight: bold;
+        font-family: cursive;
+        -webkit-transform:perspective(800px) rotateZ(0deg);
+        position:absolute;bottom:0;
+    }
+    .swiper-slide .h-7{
+        font-size: 120px;
+        font-weight: bold;
+        font-family: cursive;
+        -webkit-transform:perspective(800px) rotateZ(-5deg);
+        position:absolute;bottom:50px;left: 160px;
+    }
+    .swiper-slide .h-8{
+        font-size: 90px;
+        font-weight: bold;
+        font-family: cursive;
+        -webkit-transform:perspective(800px) rotateZ(-35deg);
+        position:absolute;bottom:0px;left: 250px;
+    }
+    .swiper-slide .h-9{
+        font-size: 90px;
+        font-weight: bold;
+        font-family: cursive;
+        -webkit-transform:perspective(800px) rotateZ(75deg);
+        position:absolute;bottom:50px;left: 800px;
+    }
+    .swiper-slide .h-10{
+        font-size: 90px;
+        font-weight: bold;
+        font-family: cursive;
+        -webkit-transform:perspective(800px) rotateZ(0deg);
+        position:absolute;top:100px;left: 600px;
+    }
+    .swiper-slide .h-11{
+        font-size: 90px;
+        font-weight: bold;
+        font-family: cursive;
+        -webkit-transform:perspective(800px) rotateZ(0deg);
+        position:absolute;bottom:10px;left: 600px;
+    }
+    .swiper-slide .h-12{
+        font-size: 90px;
+        font-weight: bold;
+        font-family: cursive;
+        -webkit-transform:perspective(800px) rotateZ(-15deg);
+        position:absolute;bottom:150px;left: 600px;
+    }
+    /* 贴条样式 结束*/
+
+/* 掌握数据样式开始 */
+    .div2{
+        position:relative;
+        background:-webkit-linear-gradient(145deg,white,transparent,white);
+        transform-style:preserve-3d;
+    }
+    .div2 h3{
+        position:absolute;top:0;
+        color: #76f6f4;
+        text-shadow: 0 0 20px black;
+        font-family: cursive;
+        -webkit-transform:translate(20px,0px);
+        -webkit-transition:1s all ease;
+    }
+    .div2 ul{
+        font-size: 25px;
+        font-family: '楷体';
+        color:white;
+        overflow: hidden;
+        width: 100%;
+    }
+    /* JS/CSS/HTML5样式 */
+    .div2 .ul2 li{
+        width: 65px;
+        background:black;
+        border-radius: 5px;
+        margin-top: 100px;
+    }
+    .div2 .ul1 li{
+        color:black;
+        position:absolute;
+    }
+    /* 条形数据样式 */
+    .div2 div{
+        border:none;
+        margin:0;
+        padding:0;
+        height:25px;
+        position:absolute;
+    }
+    .div2 .data1{
+        top:102px;
+        left:65px;
+        border-bottom-left-radius:0;
+        border-top-left-radius:0;
+        background:linear-gradient(90deg,white,red);
+
+    }
+    .div2 .data2{
+        top:230px;
+        left:65px;
+        border-bottom-left-radius:0;
+        border-top-left-radius:0;
+        background:linear-gradient(90deg,white,green);      
+    }
+    .div2 .data3{
+        top:360px;
+        left:65px;
+        border-bottom-left-radius:0;
+        border-top-left-radius:0;
+        background:linear-gradient(90deg,white,blue);
+    }
+    .module2{
+        position:relative;
+        z-index: 999;
+    }
+    .data{
+        font-size: 25px;
+        font-weight: bold;
+        font-family: '楷体';
+        color: black;
+    }

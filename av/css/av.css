@@ -1,0 +1,86 @@
+*{
+        margin:0;
+        padding:0;
+        list-style: none;
+    }
+    body{
+        background:black;
+        color:white;
+    }
+    ul{border-bottom:3px solid #34e4a0;}
+    ul li{ 
+        margin:10px;
+        width:300px;
+        font-family: '黑体';
+        font-weight: bold;
+    }
+    .now{ 
+        text-shadow: 0 0 10px red; 
+        opacity: 0.7;
+        font-weight: bold;
+        background:url(../img2/play.gif) 140px no-repeat;}
+    .box input{
+        background:green;
+        border-radius: 5px;
+        border:1px solid green;
+        color: white;
+        font-family: '黑体';
+        font-size: 15px;
+        margin-left: 5px;
+    }
+    .box{
+        width: 300px;
+        background:linear-gradient(#34e4a0,#9de0c6);
+        margin: 50px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px white;
+    }
+    .box h2{
+        font-family: '楷体';
+        color: black;
+    }
+
+    .box2{
+        width:600px;
+        position:relative;
+        box-shadow: 0 0 10px #55d0d5;
+        margin-left: 50px;
+        margin: -300px 0 0 400px;
+    }
+    .box2 video{
+        padding-bottom: 50px;
+    }
+    .loadingbar{ 
+        width:600px; 
+        height:10px; 
+        margin:0 auto;
+        position: absolute;bottom: 53px;
+        border-radius: 5px;
+    }
+    .loadingbar span{ 
+        display:block; 
+        width:0%; 
+        background:#ccc; 
+        height:100%;
+        border-radius: 5px;
+        opacity: 0.5;
+    }
+    .ibox{
+        position:absolute;bottom:0;
+        z-index: 1;
+    }
+    .ibox input{
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        color:white;
+        background: url(../qp.png) 4px 5px;
+    }
+    .ibox .bf{background:url(../bf.png) no-repeat -25px -25px;}
+    .ibox .zt{background:url(../bf.png) no-repeat -105px -25px;}
+    .ibox .kj{background:url(../bf.png) no-repeat -195px -25px;}
+    .ibox .kt{background:url(../bf.png) no-repeat -280px -25px;}
+    .ibox .ylj{background:url(../bf.png) no-repeat -353px -25px;}
+    .ibox .yl{background:url(../bf.png) no-repeat -428px -25px;}
+    .ibox .jy{background:url(../bf.png) no-repeat -25px -110px;}
+    .ibox .tz{background:url(../bf.png) no-repeat -105px -110px;}

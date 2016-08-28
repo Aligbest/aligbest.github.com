@@ -1,0 +1,100 @@
+@charset "utf-8";
+/* CSS Document */
+body{height: 5352px;}
+
+.head{margin-top: 7px;margin: 0 auto;}
+.loginbar{height: 23px;}
+.loginbar li{float: right;padding-right: 14px;border-left: 1px dotted #cccccc;
+	height: 23px;line-height: 23px;padding-left: 14px;}
+.icon{margin: 0 2px 0 22px;}
+.loginbar a{color: #d6d6d6}
+
+
+
+
+.content{height: 47px;margin-top: 40px;}
+.button{margin-top: -10px;;width: 56px;height: 26px;background-color: #f2f2f2;text-align: center;line-height: 26px;}
+.button a{text-align: center;}
+.ip{margin-top: -10px;border: 2px solid #f69;width: 450px;height: 31px;position: relative;top: 26px;left: -112px;}
+.d-1{position: relative;left: 85px;}
+.bb{color: white;background-color: #f69;}
+.ss{position: absolute;right: 100px;top: 10px;}
+.a-1{background-color: #f69;float: left;width: 70px;height: 21px;position: absolute;top:16px;right: 570px;text-align: center;padding-top: 10px;}
+
+
+/* nav开始*/
+.nav{border-bottom: 2px solid #f69;
+	margin: 53px 0 0 0px;}
+.nav a{margin: 22px;font-family: "微软雅黑";float: left;}
+.nava1{color: #f69;}
+
+
+/*nav结束*/
+
+
+
+/* sidebar开始*/
+.sidebar{position: relative;border: 2px solid #ddd;width: 210px;}
+.sidebar dl{width: 180px;border-bottom: 1px dotted #ccc;margin-top: 15px;position: relative;margin-left: 17px;}
+.sidebar dt{font-weight: bold;}
+.sidebar dl dd{margin: 12px  14px 12px 0;}
+.sidebar dl .da{color: #f69}
+
+.box,.box1{background-color: white;z-index: 1;width: 340px;height: 241px;border: 2px solid #ddd;position: absolute;top: -29px;left: 193px;display: none;}
+.sp{height: 118px;background-color: white;width: 2px;margin-left: -2px;position: absolute;top: 0}
+.box1{height: 240px;position: absolute;top:-28;}
+.sp1{height: 142px;background-color: white;margin-left: -2px;height: 118px;
+}
+
+.mrjx:hover .box{display: block;}
+.lx:hover .box1{display: block;}
+.ssjd:hover .box1{display: block;}
+.column{position: absolute;top: -2;left:213px;}
+.sp2{position: absolute;top:184px ;}
+.sp2-1{position: absolute;left: 1100px;}
+.li-a{display: block;width: 20px;height: 20px;background-color: white;border-radius:50%;margin-left: 50px;}
+
+
+.ul-1{position: absolute;top: 390px;left: 420px;}
+.li-a:hover{opacity: 0.5;}
+
+.div-1{position: relative;top:480px;margin-left: 10px}
+.img-1{height: 172px;}
+.img-2{width: 1200px;height: 425px;}
+
+/* sidebar结束*/
+
+.clumn1{float: left;width: 100%;
+
+ color: #c2c2c2;height: 26px;line-height: 26px;margin-top: 50px;
+}
+.img-3{width: 300px;height: 366px;float: left;}
+.img-4{width: 140px;height: 121px;}
+.clumn1 ul{float: left;}
+.clumn1 li{margin: 2px;}
+.div-5{margin-top: 50px;}
+.div-5 .no1{margin-left: 50px;}
+.xkdiv{margin-top: 45px;}
+.dfc{margin-top: 17px;}
+.dfc ul li{float: left; margin-left: 15px;}
+.img-5{width: 207px;height: 200px;}
+
+.jhlx{margin-top: 50px;float: left;width: 100%}
+.jhul {float: left;margin-top: 20px;}
+.jhul li{width: 250px;float: left;margin-left: 17.5px;}
+.jhul li span{float: right;}
+.jhul strong{font-size: 13px;color: #f69;}
+.mx li{width: 420px;}
+.mx a{color: #f69}
+.hd{margin-top: 650px;}/**？？？？？？？？？？？？？？**/
+.cs{color: #f69;}
+.hd .mul{margin:0 74px;}
+.mlnz .mlli{margin-left:80px; font-family: "黑体";font-size: 15px;}
+.mlnz .mllia{color: #f69;border-bottom: 2px solid #f69}
+.foot1{margin-top: 976px;height: 215px;background-color: #f5f5f5;
+}
+.foot1 ul{margin-left: 50px;}
+.foot2,.foot2 a{border-top: 1px solid #ddd;border-bottom: 1px solid #ddd;color: #666;}
+.foot3{color: #666}
+.foot1 a{color: #666}
+.foot3 ul li{float: none;}

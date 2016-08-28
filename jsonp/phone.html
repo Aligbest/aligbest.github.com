@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+	*{
+		margin:0; 
+		padding:0; 
+		list-style:none; 
+		font-family: "楷体";
+	}
+	#div1{
+		width:200px;
+		height:200px;
+		background:red;
+		position: absolute;left:0;top:0;
+	}
+</style>
+<script src="jsonp.js"></script>
+<script>
+window.onload=function(){
+	//http://v.showji.com/Locating/showji.com2016234999234.aspx?m=18616902220&output=json&callback=querycallback
+	//url:http://v.showji.com/Locating/showji.com2016234999234.aspx
+	//data:{m:xx,output:'json',callback:xx}
+	var oBtn=document.getElementById('btn1');
+	var oT1=document.getElementById('t1');
+	var url='http://v.showji.com/Locating/showji.com2016234999234.aspx';
+	
+	
+	oBtn.onclick=function(){
+		jsonp({
+			url:	url,
+			data:	{
+				m:	oT1.value,
+				output:	'json',
+			},
+			cbKey:	'callback',
+			success:function(json){
+				//console.log(json);	
+				for(var key in json){
+					var oSpan=document.getElementById(key);	
+					if(oSpan){
+						oSpan.innerHTML=json[key];	
+					}
+				}
+			}	
+		});	
+	};
+};
+</script>
+</head>
+
+<body>
+<input type="text" value="" id="t1" />
+<input type="button" value="查询" id="btn1" />
+<ul id="ul1">
+	<li>所查号码:<span id="Mobile"></span></li>
+	<li>归属省份:<span id="Province"></span></li>
+	<li>归属城市:<span id="City"></span></li>
+	<li>城市区号:<span id="AreaCode"></span></li>
+	<li>城市邮编:<span id="PostCode"></span></li>
+	<li>运 营 商:<span id="Corp"></span></li>
+</ul>
+
+</body>
+</html>
