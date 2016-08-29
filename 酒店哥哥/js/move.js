@@ -1,4 +1,4 @@
-'use strict'
+/*运动框架*/
 function getStyle(obj,sName){
 	return (obj.currentStyle||getComputedStyle(obj,false))[sName];
 }
