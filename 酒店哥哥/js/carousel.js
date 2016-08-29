@@ -10,8 +10,8 @@
     oNext.style.display=oPrev.style.display='none';
     oUl.innerHTML = oUl.innerHTML + oUl.innerHTML;
     oUl.style.width = oUl.children.length * 485 + 'px';
-
-    var timer = setInterval(function(){
+    
+    function time(){
 
         now++;
         startMove(oUl,{left:-now*485},{complete:function(){
@@ -23,7 +23,9 @@
             };
         }})
         tab()
-    }, 3000);
+    }
+
+    var timer = setInterval(time, 3000);
 
     oUl.onmouseover = oNext.onmouseover = oPrev.onmouseover =function(){
 
@@ -32,7 +34,7 @@
     };
 
     oUl.onmouseout = function(){
-
+        timer = setInterval(time,3000);
         oNext.style.display=oPrev.style.display='none';
     }
     for (var i = 0; i < aLi.length; i++) {
