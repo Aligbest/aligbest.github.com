@@ -1,3 +1,4 @@
+ /*carousel 轮播图*/
  function Carousel(){   
     var oCarousel = document.getElementById('carousel');
     var aLi = oCarousel.children[2].children;
