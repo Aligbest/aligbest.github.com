@@ -722,6 +722,21 @@
             rmdUl.style.width = rmdLi.length*546+'px'
             rmdUl.style.WebkitTransition = '.3s all ease';
             
+            function rmd(){
+                now++;
+                if (now == 5) {now = 0};
+                show(now);
+            }
+            
+            var timer = setInterval(rmd,2000);
+            
+            rmdUl.onmouseover = rmdPrev.onmouseover = rmdNext.onmouseover =function(){
+                clearInterval(timer);
+            }
+
+            rmdUl.onmouseout = function(){
+               timer = setInterval(rmd, 2000)
+            }
 
             rmdNext.onclick = function(){
 
