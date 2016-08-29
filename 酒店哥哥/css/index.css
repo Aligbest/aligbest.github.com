@@ -11,7 +11,7 @@ body{
     font-family: Arial,"Microsoft yahei",Simsun,sans-serif;
 }
 .head-box{
-    width:88%;
+    width: 1200px;
     height:30px;
     margin:0 auto;
     padding:0 5px;
@@ -59,7 +59,7 @@ body{
     overflow:hidden;
 }
 .logo-box{
-    width:88%;
+    width: 1200px;
     height:54px;
     margin:0 auto;
     padding:20px 0;
@@ -178,7 +178,7 @@ button{
     display:none;
 }
 .nav-box{
-    width:88%;
+    width: 1200px;
     margin:0 auto;
 }
 .nav-box div{
@@ -197,8 +197,7 @@ button{
 
 
 .box_section{
-    width:88%;
-    min-width: 1200px;
+    width: 1200px;
     margin:15px auto;
 }
 .section-one{
@@ -382,8 +381,7 @@ button{
     height:110px;
 }
 .ad div{
-    width:88%;
-    min-width: 1200px;
+    width: 1200px;
     margin: 0 auto;
 }
 .ad div a{
@@ -397,8 +395,7 @@ button{
     width:100%;
 }
 .classify-box{
-    width:88%;
-    min-width: 1200px;
+    width: 1200px;
     margin:0 auto;
 }
 .classify-1,.classify-2{
@@ -536,8 +533,7 @@ button{
     height:40px;
 }
 .rmd_box{
-    width:88%;
-    min-width: 1200px;
+    width: 1200px;
     margin:30px auto;
 }
 .rmd_box_d{
@@ -657,8 +653,7 @@ button{
     color:#fff;
 }
 .rmd_package_box .rmd_title{
-    width:88%;
-    min-width: 1200px;
+    width: 1200px;
     margin:0 auto;
     text-align: center;
 }
@@ -669,8 +664,7 @@ button{
     padding:20px;
 }
 .tb{
-    width:88%;
-    min-width: 1200px;
+    width: 1200px;
     margin:30px auto;
 }
 .tb div{
@@ -702,8 +696,7 @@ button{
     color:#ffa800;
 }
 .more{
-    width:88%;
-    min-width: 1200px;
+    width: 1200px;
     margin:0 auto;
     text-align: center;
 }
@@ -728,8 +721,7 @@ button{
     margin-top: 40px;
 }
 .service1{
-    width:88%;
-    min-width: 1200px;
+    width: 1200px;
     margin:0 auto;
     text-align: center;
 }
@@ -739,8 +731,7 @@ button{
     line-height: 40px;
 }
 .service2{
-    width:88%;
-    min-width: 1200px;
+    width: 1200px;
     margin:40px auto;
     position:relative;
 }
@@ -796,8 +787,7 @@ button{
     margin-top: 60px;
 }
 .media_title{
-    width:88%;
-    min-width: 1200px;
+    width:1200px;
     margin:0 auto;
     text-align: center;
     padding-bottom: 40px;
@@ -808,8 +798,7 @@ button{
     line-height: 40px;
 }
 .media_box,.media_box2{
-    width:88%;
-    min-width: 1200px;
+    width:1200px;
     margin:0 auto;
     overflow:hidden;
 }
@@ -844,8 +833,7 @@ button{
     padding:40px 0;
 }
 .footer_box{
-    width:88%;
-    min-width: 1200px;
+    width: 1200px;
     margin:0 auto;
 }
 .ft{
