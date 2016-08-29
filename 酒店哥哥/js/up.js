@@ -1,3 +1,4 @@
+/* nav 吸顶条*/
 function Up(){
     var oNav1 = document.getElementById('nav');
     var oNav2 = document.getElementById('nav-2')
