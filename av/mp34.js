@@ -15,12 +15,12 @@ function vIdeo(){
         };
         
         //快进
-        aBtn[2].onclick=function(){
+        aBtn[3].onclick=function(){
             oV.currentTime++;
         };
         
         //快退
-        aBtn[3].onclick=function(){
+        aBtn[2].onclick=function(){
             oV.currentTime--;
         };
         
